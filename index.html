@@ -1,0 +1,1493 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Mycelium 2025 - Thailand's Underground Music Convergence</title><style>/* Global CSS
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+:root {
+    --jungle-green: #2D5016;
+    --mycelium-gold: #D4A574;
+    --twilight-purple: #6B4984;
+    --dawn-coral: #E67E5C;
+    --stone-gray: #8B9A8E;
+    --bg-light: #F9F7F4;
+    --text-dark: #2A2A2A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--jungle-green);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-top: 3rem; }
+h3 { font-size: 1.5rem; margin-top: 2rem; color: var(--dawn-coral); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--jungle-green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--dawn-coral);
+}
+
+strong {
+    font-weight: 700;
+    color: var(--jungle-green);
+}
+
+em {
+    font-style: italic;
+    color: var(--twilight-purple);
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SITE HEADER
+   ======================================== */
+
+.site-header {
+    background: var(--jungle-green);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.logo-text {
+    color: var(--mycelium-gold);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================================
+   SITE NAVIGATION
+   ======================================== */
+
+.site-nav {
+    background: var(--jungle-green);
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+    transform: translateY(-2px);
+}
+
+.nav-link.nav-cta {
+    background: var(--dawn-coral);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-link.nav-cta:hover {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+}
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+.site-footer {
+    background: linear-gradient(135deg, var(--jungle-green) 0%, var(--twilight-purple) 100%);
+    color: var(--white);
+    padding: 3rem 0 1.5rem;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--mycelium-gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    color: var(--mycelium-gold);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-date,
+.footer-location {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--mycelium-gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: var(--mycelium-gold);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--dawn-coral);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+}
+
+.btn-secondary:hover {
+    background: var(--dawn-coral);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--jungle-green);
+    color: var(--jungle-green);
+}
+
+.btn-outline:hover {
+    background: var(--jungle-green);
+    color: var(--white);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--jungle-green);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-nav.active {
+        max-height: 100vh;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media print {
+    .site-header,
+    .site-nav,
+    .site-footer,
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    body {
+        font-size: 11pt;
+    }
+}
+
+/* Mycelium 2025 - Thailand's Underground Music Convergence - Page CSS */
+
+/* Hero Section */
+.hero-home {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--jungle-green) 0%, var(--twilight-purple) 100%);
+    background-image: 
+        linear-gradient(135deg, rgba(45, 80, 22, 0.9) 0%, rgba(107, 73, 132, 0.9) 100%),
+        url('https://codahosted.io/docs/9bejBCT96g/blobs/bl-vi8tevtqEe/5bb3a0f953e97db896e4db44c305165d66c5ef0ea78f8bfa57fe698b844cfa9ce1fcdb4e947a87565f68d37516ac86c445cc6dbb442933d3dc3dd190f1159248693f6f1fabdf73dbe85d8c16a0a9d034209ee8957d3dedebbda5c6cc5a7c9f08a38e8868');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(45, 80, 22, 0.5) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    padding: 3rem 2rem;
+    background: rgba(45, 80, 22, 0.85);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 3px solid var(--mycelium-gold);
+}
+
+.hero-content h1 {
+    color: var(--mycelium-gold);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    color: var(--dawn-coral);
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.hero-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-detail .icon {
+    font-size: 1.5rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 5rem 0;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+}
+
+.intro-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: var(--stone-gray);
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Featured Artists */
+.featured-artists {
+    padding: 5rem 0;
+    background: white;
+}
+
+.artist-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.artist-feature-card {
+    background: var(--bg-light);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.artist-feature-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-icon {
+    font-size: 3rem;
+}
+
+.artist-feature-card h3 {
+    color: var(--jungle-green);
+    margin-bottom: 0.5rem;
+}
+
+.artist-tag {
+    color: var(--dawn-coral);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.view-all-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Stages Preview */
+.stages-preview {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stage-preview-card {
+    padding: 2rem;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stage-preview-card:hover {
+    transform: translateY(-5px);
+}
+
+.stage-preview-card h3 {
+    color: white;
+    margin-top: 1rem;
+}
+
+.stage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stage-mycelium {
+    background: linear-gradient(135deg, var(--dawn-coral), var(--jungle-green));
+}
+
+.stage-jungle {
+    background: linear-gradient(135deg, var(--jungle-green), #1a3009);
+}
+
+.stage-psysquare {
+    background: linear-gradient(135deg, var(--twilight-purple), #3d2449);
+}
+
+.stage-grounding {
+    background: linear-gradient(135deg, var(--stone-gray), #5a6760);
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experience-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+}
+
+.experience-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.experience-card h3 {
+    color: var(--jungle-green);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--jungle-green), var(--twilight-purple));
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--mycelium-gold);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline.btn-large {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline.btn-large:hover {
+    background: white;
+    color: var(--jungle-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .stages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}/* Hero Section */
+.hero-home {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--jungle-green) 0%, var(--twilight-purple) 100%);
+    background-image: 
+        linear-gradient(135deg, rgba(45, 80, 22, 0.9) 0%, rgba(107, 73, 132, 0.9) 100%),
+        url('https://codahosted.io/docs/9bejBCT96g/blobs/bl-vi8tevtqEe/5bb3a0f953e97db896e4db44c305165d66c5ef0ea78f8bfa57fe698b844cfa9ce1fcdb4e947a87565f68d37516ac86c445cc6dbb442933d3dc3dd190f1159248693f6f1fabdf73dbe85d8c16a0a9d034209ee8957d3dedebbda5c6cc5a7c9f08a38e8868');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(45, 80, 22, 0.5) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    padding: 3rem 2rem;
+    background: rgba(45, 80, 22, 0.85);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 3px solid var(--mycelium-gold);
+}
+
+.hero-content h1 {
+    color: var(--mycelium-gold);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    color: var(--dawn-coral);
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.hero-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-detail .icon {
+    font-size: 1.5rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 5rem 0;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+}
+
+.intro-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: var(--stone-gray);
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Featured Artists */
+.featured-artists {
+    padding: 5rem 0;
+    background: white;
+}
+
+.artist-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.artist-feature-card {
+    background: var(--bg-light);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.artist-feature-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-icon {
+    font-size: 3rem;
+}
+
+.artist-feature-card h3 {
+    color: var(--jungle-green);
+    margin-bottom: 0.5rem;
+}
+
+.artist-tag {
+    color: var(--dawn-coral);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.view-all-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Stages Preview */
+.stages-preview {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stage-preview-card {
+    padding: 2rem;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stage-preview-card:hover {
+    transform: translateY(-5px);
+}
+
+.stage-preview-card h3 {
+    color: white;
+    margin-top: 1rem;
+}
+
+.stage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stage-mycelium {
+    background: linear-gradient(135deg, var(--dawn-coral), var(--jungle-green));
+}
+
+.stage-jungle {
+    background: linear-gradient(135deg, var(--jungle-green), #1a3009);
+}
+
+.stage-psysquare {
+    background: linear-gradient(135deg, var(--twilight-purple), #3d2449);
+}
+
+.stage-grounding {
+    background: linear-gradient(135deg, var(--stone-gray), #5a6760);
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experience-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+}
+
+.experience-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.experience-card h3 {
+    color: var(--jungle-green);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--jungle-green), var(--twilight-purple));
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--mycelium-gold);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline.btn-large {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline.btn-large:hover {
+    background: white;
+    color: var(--jungle-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .stages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}</style></head><body><header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="/mycelium-2025/">
+                <span class="logo-icon">🍄</span>
+                <span class="logo-text">Mycelium 2025</span>
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header><nav class="site-nav" id="mainNav">
+    <ul class="nav-list">
+        <li><a href="/mycelium-2025/" class="nav-link">Home</a></li>
+        <li><a href="/mycelium-2025/lineup" class="nav-link">Lineup</a></li>
+        <li><a href="/mycelium-2025/schedule" class="nav-link">Schedule</a></li>
+        <li><a href="/mycelium-2025/stages" class="nav-link">Stages</a></li>
+        <li><a href="/mycelium-2025/practical-info" class="nav-link">Practical Info</a></li>
+        <li><a href="/mycelium-2025/tickets" class="nav-link nav-cta">Tickets</a></li>
+    </ul>
+</nav>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    
+    if (toggle) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+
+    // Close menu when clicking nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    });
+
+    // Set active nav state
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+</script><div class="hero-home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Mycelium 2025</h1>
+        <p class="hero-subtitle">Thailand's Underground Music Convergence</p>
+        <p class="hero-tagline">Where jungle meets sound, and networks connect souls</p>
+        <div class="hero-details">
+            <div class="hero-detail">
+                <span class="icon">📅</span>
+                <span>November 14-16, 2025</span>
+            </div>
+            <div class="hero-detail">
+                <span class="icon">📍</span>
+                <span>Tiger Jungle Art Camp, Chiang Dao</span>
+            </div>
+            <div class="hero-detail">
+                <span class="icon">🎵</span>
+                <span>50 Acts • 4 Stages • 3 Days</span>
+            </div>
+        </div>
+        <div class="hero-cta">
+            <a href="/mycelium-2025/tickets" class="btn btn-primary btn-large">Get Your Tickets</a>
+            <a href="/mycelium-2025/lineup" class="btn btn-secondary btn-large">Explore Lineup</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>↓</span>
+    </div>
+</div>
+
+<section class="intro-section">
+    <div class="container">
+        <h2>Four Stages, 50 Acts, One Interconnected Musical Ecosystem</h2>
+        <div class="intro-content">
+            <div class="intro-text">
+                <p>Mycelium 2025 transforms Tiger Jungle Art Camp into a temporary village at the foot of Chiang Dao's mountains where Thailand's underground music scene meets international electronic pioneers across three days of continuous programming.</p>
+                
+                <p>The festival operates on a biological metaphor—beneath your feet, mycelial networks connect plants through fungal threads, enabling communication and mutual support across vast distances. This same philosophy drives the festival's curation: 50 artists spanning Thai reggae legends, Lanna electronic innovators, Bangkok techno architects, and Berlin atmospheric producers, all interconnected through sound.</p>
+            </div>
+            <div class="intro-image">
+                <img src="https://codahosted.io/docs/9bejBCT96g/blobs/bl-i5Il_-u57U/2a66aa4abfd7bafbafd22da6b58a7e1f991e51fa6c71489664342902a08dcfd46ee948d9197ab245d428d5117765863d04207f7741bdc6aba5371baa366ad55a2683dd98b4d4a08586c72d4a4e91d26b0f4d70f8e2331e5ba77987bb8426742b94e1f8ac" alt="Mycelial network underground">
+                <p class="caption">The mycelial network: nature's internet connecting all living things</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-artists">
+    <div class="container">
+        <h2>Featured Artists</h2>
+        <div class="artist-carousel">
+            <div class="artist-feature-card">
+                <div class="artist-feature-image" style="background: linear-gradient(135deg, var(--dawn-coral), var(--jungle-green));">
+                    <span class="artist-icon">🎸</span>
+                </div>
+                <h3>Srirajah Rockers</h3>
+                <p class="artist-tag">22 Years of Thai Reggae Mastery</p>
+                <p>Thailand's premier 12-piece reggae/dub band delivering roots rock reggae with distinctive Thai flavor.</p>
+                <a href="/mycelium-2025/lineup#srirajah" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <div class="artist-feature-card">
+                <div class="artist-feature-image" style="background: linear-gradient(135deg, var(--twilight-purple), var(--dawn-coral));">
+                    <span class="artist-icon">🎺</span>
+                </div>
+                <h3>Venn</h3>
+                <p class="artist-tag">2024's Best Album Recognition</p>
+                <p>Award-winning experimental alternative folk with bilingual Thai-English storytelling.</p>
+                <a href="/mycelium-2025/lineup#venn" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <div class="artist-feature-card">
+                <div class="artist-feature-image" style="background: linear-gradient(135deg, var(--mycelium-gold), var(--twilight-purple));">
+                    <span class="artist-icon">🌅</span>
+                </div>
+                <h3>Easy Velvet</h3>
+                <p class="artist-tag">Sunset Downtempo Ethnic Fusion</p>
+                <p>Downtempo ethnic music fusing trip hop, oriental vibes, and psychedelic modulations.</p>
+                <a href="/mycelium-2025/lineup#easy-velvet" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <div class="artist-feature-card">
+                <div class="artist-feature-image" style="background: linear-gradient(135deg, var(--jungle-green), var(--stone-gray));">
+                    <span class="artist-icon">🏆</span>
+                </div>
+                <h3>Helicopter Secondhand</h3>
+                <p class="artist-tag">World Cup Busking Champions</p>
+                <p>Chiang Mai trio fusing contemporary rock with Aboriginal, African, and Lanna influences.</p>
+                <a href="/mycelium-2025/lineup#helicopter" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+        <div class="view-all-cta">
+            <a href="/mycelium-2025/lineup" class="btn btn-primary">View Complete Lineup</a>
+        </div>
+    </div>
+</section>
+
+<section class="stages-preview">
+    <div class="container">
+        <h2>Four Distinct Sonic Territories</h2>
+        <div class="stages-grid">
+            <div class="stage-preview-card stage-mycelium">
+                <div class="stage-icon">🎸</div>
+                <h3>Mycelium Main Stage</h3>
+                <p>Full-band performances showcasing rock, reggae, folk, and world music. Central gathering space for communal experiences.</p>
+            </div>
+
+            <div class="stage-preview-card stage-jungle">
+                <div class="stage-icon">🌴</div>
+                <h3>Jungle Stage</h3>
+                <p>DJ sets beneath forest canopy specializing in house, funk, downtempo from morning through dusk.</p>
+            </div>
+
+            <div class="stage-preview-card stage-psysquare">
+                <div class="stage-icon">🔮</div>
+                <h3>Psytrance Stage</h3>
+                <p>Graveyard shift programming with forest psytrance and twilight crossovers spiraling until sunrise.</p>
+            </div>
+
+            <div class="stage-preview-card stage-grounding">
+                <div class="stage-icon">🧘</div>
+                <h3>Grounding Stage</h3>
+                <p>Ambient drift and experimental haze for introspective sonic journeys and contemplative spaces.</p>
+            </div>
+        </div>
+        <div class="view-all-cta">
+            <a href="/mycelium-2025/stages" class="btn btn-secondary">Explore All Stages</a>
+        </div>
+    </div>
+</section>
+
+<section class="experience-section">
+    <div class="container">
+        <h2>More Than Music</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-icon">🏕️</div>
+                <h3>Free Camping</h3>
+                <p>Walk-in tent camping costs nothing. Bring your tent, claim your spot. Genuine community over transactional attendance.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-icon">🧘‍♀️</div>
+                <h3>Morning Yoga</h3>
+                <p>Start your festival days with guided yoga sessions in the mountain jungle setting.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-icon">🎨</div>
+                <h3>Art Workshops</h3>
+                <p>Participate in creative workshops led by local and international artists throughout the festival.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-icon">🥾</div>
+                <h3>Nature Walks</h3>
+                <p>Guided walks through Chiang Dao's pristine mountain jungle exploring local ecology and culture.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-icon">🍲</div>
+                <h3>Food Vendors</h3>
+                <p>Vegetarian and general cuisine from local vendors. BYOF in closed containers welcome.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-icon">💧</div>
+                <h3>Filtered Water</h3>
+                <p>Free filtered water stations throughout the venue. Bring reusable bottles—eliminate single-use plastic.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Join the Network</h2>
+            <p>50 acts representing decades of scene-building, cultural preservation, and creative risk-taking await you in Chiang Dao's jungle.</p>
+            <div class="cta-buttons">
+                <a href="/mycelium-2025/tickets" class="btn btn-primary btn-large">Get Tickets Now</a>
+                <a href="/mycelium-2025/practical-info" class="btn btn-outline btn-large">Plan Your Visit</a>
+            </div>
+        </div>
+    </div>
+</section><footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Mycelium 2025</h3>
+                <p>Thailand's Underground Music Convergence</p>
+                <p class="footer-date">November 14-16, 2025</p>
+                <p class="footer-location">Tiger Jungle Art Camp, Chiang Dao</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Festival</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/lineup">Lineup</a></li>
+                    <li><a href="/mycelium-2025/schedule">Schedule</a></li>
+                    <li><a href="/mycelium-2025/stages">Stages</a></li>
+                    <li><a href="/mycelium-2025/tickets">Tickets</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/practical-info">Practical Info</a></li>
+                    <li><a href="/mycelium-2025/location">Location</a></li>
+                    <li><a href="/mycelium-2025/faq">FAQ</a></li>
+                    <li><a href="/mycelium-2025/about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/news">News</a></li>
+                    <li><a href="/mycelium-2025/contact">Contact</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mycelium Festival. All rights reserved.</p>
+            <p class="footer-tagline">Connected through sound 🍄</p>
+        </div>
+    </div>
+</footer></body></html>

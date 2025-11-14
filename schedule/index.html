@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Festival Schedule - Mycelium 2025</title><style>/* Global CSS
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+:root {
+    --jungle-green: #2D5016;
+    --mycelium-gold: #D4A574;
+    --twilight-purple: #6B4984;
+    --dawn-coral: #E67E5C;
+    --stone-gray: #8B9A8E;
+    --bg-light: #F9F7F4;
+    --text-dark: #2A2A2A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--jungle-green);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-top: 3rem; }
+h3 { font-size: 1.5rem; margin-top: 2rem; color: var(--dawn-coral); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--jungle-green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--dawn-coral);
+}
+
+strong {
+    font-weight: 700;
+    color: var(--jungle-green);
+}
+
+em {
+    font-style: italic;
+    color: var(--twilight-purple);
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SITE HEADER
+   ======================================== */
+
+.site-header {
+    background: var(--jungle-green);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.logo-text {
+    color: var(--mycelium-gold);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================================
+   SITE NAVIGATION
+   ======================================== */
+
+.site-nav {
+    background: var(--jungle-green);
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+    transform: translateY(-2px);
+}
+
+.nav-link.nav-cta {
+    background: var(--dawn-coral);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-link.nav-cta:hover {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+}
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+.site-footer {
+    background: linear-gradient(135deg, var(--jungle-green) 0%, var(--twilight-purple) 100%);
+    color: var(--white);
+    padding: 3rem 0 1.5rem;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--mycelium-gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    color: var(--mycelium-gold);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-date,
+.footer-location {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--mycelium-gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: var(--mycelium-gold);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--dawn-coral);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+}
+
+.btn-secondary:hover {
+    background: var(--dawn-coral);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--jungle-green);
+    color: var(--jungle-green);
+}
+
+.btn-outline:hover {
+    background: var(--jungle-green);
+    color: var(--white);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--jungle-green);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-nav.active {
+        max-height: 100vh;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media print {
+    .site-header,
+    .site-nav,
+    .site-footer,
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    body {
+        font-size: 11pt;
+    }
+}
+
+/* Festival Schedule - Mycelium 2025 - Page CSS */
+
+</style></head><body><header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="/mycelium-2025/">
+                <span class="logo-icon">🍄</span>
+                <span class="logo-text">Mycelium 2025</span>
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header><nav class="site-nav" id="mainNav">
+    <ul class="nav-list">
+        <li><a href="/mycelium-2025/" class="nav-link">Home</a></li>
+        <li><a href="/mycelium-2025/lineup" class="nav-link">Lineup</a></li>
+        <li><a href="/mycelium-2025/schedule" class="nav-link">Schedule</a></li>
+        <li><a href="/mycelium-2025/stages" class="nav-link">Stages</a></li>
+        <li><a href="/mycelium-2025/practical-info" class="nav-link">Practical Info</a></li>
+        <li><a href="/mycelium-2025/tickets" class="nav-link nav-cta">Tickets</a></li>
+    </ul>
+</nav>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    
+    if (toggle) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+
+    // Close menu when clicking nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    });
+
+    // Set active nav state
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+</script><div class="page-hero">
+    <h1>Festival Schedule</h1>
+    <p class="page-subtitle">50 acts across 4 stages, 48+ hours of continuous programming. Plan your journey.</p>
+</div>
+
+<div class="container">
+    <section class="schedule-tools">
+        <div class="schedule-intro">
+            <p>Navigate 50 acts intelligently. Use filters to focus on specific stages or days. Download the complete schedule or build your personal planner.</p>
+        </div>
+        
+        <div class="schedule-actions">
+            <button class="btn btn-primary" id="buildSchedule">Build My Schedule</button>
+            <a href="#" class="btn btn-secondary" download>Download PDF</a>
+        </div>
+    </section>
+
+    <section class="schedule-filters">
+        <h3>Filter By Stage</h3>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-stage="all">All Stages</button>
+            <button class="filter-btn" data-stage="mycelium">Mycelium</button>
+            <button class="filter-btn" data-stage="jungle">Jungle</button>
+            <button class="filter-btn" data-stage="psysquare">Psysquare</button>
+            <button class="filter-btn" data-stage="grounding">Grounding</button>
+        </div>
+    </section>
+
+    <section class="day-schedule" id="friday-schedule">
+        <h2>Friday November 14</h2>
+        <p class="day-subtitle">Opening Night: 17:00-07:45 • 15 Acts</p>
+        
+        <div class="schedule-table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Artist</th>
+                        <th>Stage</th>
+                        <th>Rating</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-stage="mycelium">
+                        <td>17:00-18:00</td>
+                        <td><strong>Drum Circle</strong></td>
+                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
+                        <td><span class="rating-display">⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="mycelium">
+                        <td>18:00-19:00</td>
+                        <td><strong>Tae Simong</strong></td>
+                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
+                        <td><span class="rating-display">⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="jungle">
+                        <td>18:00-20:00</td>
+                        <td><strong>Kittikun</strong></td>
+                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
+                        <td><span class="rating-display">⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="mycelium" class="highlight-row">
+                        <td>19:30-20:30</td>
+                        <td><strong>Helicopter Secondhand</strong></td>
+                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
+                        <td><span class="rating-display">⭐⭐⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="jungle">
+                        <td>20:00-22:00</td>
+                        <td><strong>Kornnlee</strong></td>
+                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
+                        <td><span class="rating-display">⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="mycelium">
+                        <td>21:00-22:00</td>
+                        <td><strong>Makara</strong></td>
+                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
+                        <td><span class="rating-display">⭐⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="jungle">
+                        <td>22:00-00:00</td>
+                        <td><strong>Liem</strong></td>
+                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
+                        <td><span class="rating-display">⭐⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="mycelium">
+                        <td>22:30-23:30</td>
+                        <td><strong>The Labrador Band</strong></td>
+                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
+                        <td><span class="rating-display">⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="grounding" class="highlight-row">
+                        <td>23:45-00:45</td>
+                        <td><strong>Amber Leaf</strong></td>
+                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
+                        <td><span class="rating-display">⭐⭐⭐</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="jungle" class="graveyard-row">
+                        <td>00:00-02:00</td>
+                        <td><strong>Takky</strong></td>
+                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
+                        <td><span class="rating-display">⭐ 🌙</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="grounding" class="graveyard-row highlight-row">
+                        <td>01:00-02:00</td>
+                        <td><strong>Wannarit</strong> (Stylish Nonsense)</td>
+                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
+                        <td><span class="rating-display">⭐⭐⭐ 🌙</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="jungle" class="graveyard-row">
+                        <td>02:00-04:00</td>
+                        <td><strong>Hellblueboi</strong></td>
+                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
+                        <td><span class="rating-display">⭐ 🌙</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="grounding" class="graveyard-row">
+                        <td>02:15-03:15</td>
+                        <td><strong>Midnight Valencia</strong></td>
+                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
+                        <td><span class="rating-display">⭐ 🌙</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="grounding" class="graveyard-row">
+                        <td>03:30-04:30</td>
+                        <td><strong>Kienng</strong></td>
+                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
+                        <td><span class="rating-display">⭐ 🌙</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                    <tr data-stage="grounding" class="graveyard-row">
+                        <td>04:45-05:45</td>
+                        <td><strong>Pyrosoma</strong></td>
+                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
+                        <td><span class="rating-display">⭐⭐ 🌙</span></td>
+                        <td><button class="btn-small btn-add">Add</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="day-schedule" id="saturday-schedule">
+        <h2>Saturday November 15</h2>
+        <p class="day-subtitle">Peak Programming: 09:00-06:00 • 26 Acts Across All 4 Stages</p>
+        
+        <div class="key-performances">
+            <h3>Saturday Highlights</h3>
+            <ul>
+                <li><strong>16:00-18:00:</strong> Easy Velvet (Jungle) - Sunset downtempo ⭐⭐⭐</li>
+                <li><strong>21:30-22:30:</strong> Venn (Mycelium) - 2024's best album ⭐⭐⭐</li>
+                <li><strong>23:00-00:00:</strong> Srirajah Rockers (Mycelium) - 22-year Thai reggae legends ⭐⭐⭐</li>
+                <li><strong>02:00-04:00:</strong> Elaheh (Jungle) - Bangkok underground architect ⭐⭐ 🌙</li>
+            </ul>
+        </div>
+        
+        <p class="schedule-note"><em>Complete Saturday schedule with 26 acts available in downloadable PDF. Use filters above to explore by stage.</em></p>
+    </section>
+
+    <section class="day-schedule" id="sunday-schedule">
+        <h2>Sunday November 16</h2>
+        <p class="day-subtitle">Sunrise Comedowns & Afternoon Closings: 06:00-17:30 • 9 Acts</p>
+        
+        <div class="key-performances">
+            <h3>Sunday Highlights</h3>
+            <ul>
+                <li><strong>06:20-08:20:</strong> Shantiago (Psysquare) - Sound healing sunrise bridge ⭐⭐</li>
+                <li><strong>09:20-11:20:</strong> Amber Leaf (Grounding) - Movement-based ambient ⭐⭐⭐</li>
+                <li><strong>11:20-13:20:</strong> Wuthichai (Jungle) - 24 years Lanna-electronic integration ⭐⭐⭐</li>
+            </ul>
+        </div>
+        
+        <p class="schedule-note"><em>Sunday programming focuses on comedown and cultural grounding. Essential closings from scene pioneers.</em></p>
+    </section>
+
+    <section class="schedule-tips">
+        <h2>Strategic Scheduling Tips</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h4>🌅 Don't Miss Sunset</h4>
+                <p>Easy Velvet (Saturday 16:00-18:00) captures the magical transition. Often the most memorable festival moment.</p>
+            </div>
+            <div class="tip-card">
+                <h4>🌙 Graveyard Shift Strategy</h4>
+                <p>Acts performing 02:00-08:00 demand physical commitment. Attempt only if genuinely energized. Forcing it creates misery.</p>
+            </div>
+            <div class="tip-card">
+                <h4>🗺️ Stage Proximity</h4>
+                <p>Mycelium and Jungle are walkable. Psysquare and Grounding require intentional journey. Plan transitions.</p>
+            </div>
+            <div class="tip-card">
+                <h4>📋 Key Clashes</h4>
+                <p>Saturday 21:30-23:00: Venn then Srirajah Rockers (both Mycelium). Catch Venn, transition at 23:00.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section-inline">
+        <div class="cta-box">
+            <h3>Build Your Perfect Festival Experience</h3>
+            <p>Download the complete schedule PDF or dive deeper into artist profiles to make informed choices.</p>
+            <div class="cta-buttons">
+                <a href="/mycelium-2025/lineup" class="btn btn-primary">Explore Artists</a>
+                <a href="/mycelium-2025/tickets" class="btn btn-secondary">Get Tickets</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const scheduleRows = document.querySelectorAll('.schedule-table tbody tr');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active state
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterStage = this.dataset.stage;
+            
+            // Filter rows
+            scheduleRows.forEach(row => {
+                if (filterStage === 'all' || row.dataset.stage === filterStage) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Add to schedule functionality
+    const addButtons = document.querySelectorAll('.btn-add');
+    addButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (this.textContent === 'Add') {
+                this.textContent = 'Added ✓';
+                this.classList.add('added');
+            } else {
+                this.textContent = 'Add';
+                this.classList.remove('added');
+            }
+        });
+    });
+});
+</script><footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Mycelium 2025</h3>
+                <p>Thailand's Underground Music Convergence</p>
+                <p class="footer-date">November 14-16, 2025</p>
+                <p class="footer-location">Tiger Jungle Art Camp, Chiang Dao</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Festival</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/lineup">Lineup</a></li>
+                    <li><a href="/mycelium-2025/schedule">Schedule</a></li>
+                    <li><a href="/mycelium-2025/stages">Stages</a></li>
+                    <li><a href="/mycelium-2025/tickets">Tickets</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/practical-info">Practical Info</a></li>
+                    <li><a href="/mycelium-2025/location">Location</a></li>
+                    <li><a href="/mycelium-2025/faq">FAQ</a></li>
+                    <li><a href="/mycelium-2025/about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/news">News</a></li>
+                    <li><a href="/mycelium-2025/contact">Contact</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mycelium Festival. All rights reserved.</p>
+            <p class="footer-tagline">Connected through sound 🍄</p>
+        </div>
+    </div>
+</footer></body></html>

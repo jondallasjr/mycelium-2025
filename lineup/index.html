@@ -1,0 +1,1417 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Complete Artist Guide - Mycelium 2025</title><style>/* Global CSS
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+:root {
+    --jungle-green: #2D5016;
+    --mycelium-gold: #D4A574;
+    --twilight-purple: #6B4984;
+    --dawn-coral: #E67E5C;
+    --stone-gray: #8B9A8E;
+    --bg-light: #F9F7F4;
+    --text-dark: #2A2A2A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--jungle-green);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-top: 3rem; }
+h3 { font-size: 1.5rem; margin-top: 2rem; color: var(--dawn-coral); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--jungle-green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--dawn-coral);
+}
+
+strong {
+    font-weight: 700;
+    color: var(--jungle-green);
+}
+
+em {
+    font-style: italic;
+    color: var(--twilight-purple);
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SITE HEADER
+   ======================================== */
+
+.site-header {
+    background: var(--jungle-green);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.logo-text {
+    color: var(--mycelium-gold);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================================
+   SITE NAVIGATION
+   ======================================== */
+
+.site-nav {
+    background: var(--jungle-green);
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+    transform: translateY(-2px);
+}
+
+.nav-link.nav-cta {
+    background: var(--dawn-coral);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-link.nav-cta:hover {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+}
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+.site-footer {
+    background: linear-gradient(135deg, var(--jungle-green) 0%, var(--twilight-purple) 100%);
+    color: var(--white);
+    padding: 3rem 0 1.5rem;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--mycelium-gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    color: var(--mycelium-gold);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-date,
+.footer-location {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--mycelium-gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: var(--mycelium-gold);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--dawn-coral);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: var(--mycelium-gold);
+    color: var(--jungle-green);
+}
+
+.btn-secondary:hover {
+    background: var(--dawn-coral);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--jungle-green);
+    color: var(--jungle-green);
+}
+
+.btn-outline:hover {
+    background: var(--jungle-green);
+    color: var(--white);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--jungle-green);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-nav.active {
+        max-height: 100vh;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media print {
+    .site-header,
+    .site-nav,
+    .site-footer,
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    body {
+        font-size: 11pt;
+    }
+}
+
+/* Complete Artist Guide - Mycelium 2025 - Page CSS */
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--jungle-green), var(--twilight-purple));
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-hero h1 {
+    color: var(--mycelium-gold);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Lineup Intro */
+.lineup-intro {
+    margin-bottom: 4rem;
+}
+
+.lineup-intro > p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.rating-system {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--mycelium-gold);
+}
+
+.rating-system h3 {
+    color: var(--jungle-green);
+    margin-bottom: 1.5rem;
+}
+
+.rating-legend {
+    display: grid;
+    gap: 1rem;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.rating {
+    display: inline-flex;
+    gap: 4px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.star {
+    color: var(--mycelium-gold);
+}
+
+.moon {
+    color: var(--twilight-purple);
+}
+
+/* Artist Grid */
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.artist-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--mycelium-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.artist-card.featured {
+    border-left-width: 8px;
+    border-left-color: var(--dawn-coral);
+    background: linear-gradient(to bottom, white 0%, var(--bg-light) 100%);
+}
+
+.artist-name {
+    font-size: 1.6rem;
+    color: var(--jungle-green);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.artist-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.artist-rating {
+    font-size: 1.1rem;
+}
+
+.artist-time {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--twilight-purple);
+    font-size: 0.95rem;
+}
+
+.stage-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.stage-mycelium {
+    background: var(--dawn-coral);
+    color: white;
+}
+
+.stage-jungle {
+    background: var(--jungle-green);
+    color: white;
+}
+
+.stage-psysquare {
+    background: var(--twilight-purple);
+    color: white;
+}
+
+.stage-grounding {
+    background: var(--stone-gray);
+    color: white;
+}
+
+.artist-card h4 {
+    color: var(--dawn-coral);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.artist-card p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Section Headers */
+.tier-one-artists,
+.tier-two-artists {
+    margin: 5rem 0;
+}
+
+.tier-one-artists h2,
+.tier-two-artists h2 {
+    color: var(--jungle-green);
+    border-bottom: 3px solid var(--mycelium-gold);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Decision Framework */
+.decision-framework {
+    margin: 5rem 0;
+    padding: 3rem 0;
+    background: var(--bg-light);
+    border-radius: 15px;
+}
+
+.decision-framework h2 {
+    text-align: center;
+    color: var(--jungle-green);
+    margin-bottom: 3rem;
+}
+
+.framework-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.framework-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.framework-box.priority {
+    border: 3px solid var(--dawn-coral);
+}
+
+.framework-box h3 {
+    color: var(--jungle-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.framework-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.framework-box li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.framework-box li:last-child {
+    border-bottom: none;
+}
+
+.framework-box p {
+    margin-bottom: 1rem;
+}
+
+.framework-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* CTA Section Inline */
+.cta-section-inline {
+    margin: 5rem 0;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--jungle-green), var(--twilight-purple));
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cta-box h3 {
+    color: var(--mycelium-gold);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .framework-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .rating-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--jungle-green), var(--twilight-purple));
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-hero h1 {
+    color: var(--mycelium-gold);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Lineup Intro */
+.lineup-intro {
+    margin-bottom: 4rem;
+}
+
+.lineup-intro > p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.rating-system {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--mycelium-gold);
+}
+
+.rating-system h3 {
+    color: var(--jungle-green);
+    margin-bottom: 1.5rem;
+}
+
+.rating-legend {
+    display: grid;
+    gap: 1rem;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.rating {
+    display: inline-flex;
+    gap: 4px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.star {
+    color: var(--mycelium-gold);
+}
+
+.moon {
+    color: var(--twilight-purple);
+}
+
+/* Artist Grid */
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.artist-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--mycelium-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.artist-card.featured {
+    border-left-width: 8px;
+    border-left-color: var(--dawn-coral);
+    background: linear-gradient(to bottom, white 0%, var(--bg-light) 100%);
+}
+
+.artist-name {
+    font-size: 1.6rem;
+    color: var(--jungle-green);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.artist-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.artist-rating {
+    font-size: 1.1rem;
+}
+
+.artist-time {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--twilight-purple);
+    font-size: 0.95rem;
+}
+
+.stage-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.stage-mycelium {
+    background: var(--dawn-coral);
+    color: white;
+}
+
+.stage-jungle {
+    background: var(--jungle-green);
+    color: white;
+}
+
+.stage-psysquare {
+    background: var(--twilight-purple);
+    color: white;
+}
+
+.stage-grounding {
+    background: var(--stone-gray);
+    color: white;
+}
+
+.artist-card h4 {
+    color: var(--dawn-coral);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.artist-card p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Section Headers */
+.tier-one-artists,
+.tier-two-artists {
+    margin: 5rem 0;
+}
+
+.tier-one-artists h2,
+.tier-two-artists h2 {
+    color: var(--jungle-green);
+    border-bottom: 3px solid var(--mycelium-gold);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Decision Framework */
+.decision-framework {
+    margin: 5rem 0;
+    padding: 3rem 0;
+    background: var(--bg-light);
+    border-radius: 15px;
+}
+
+.decision-framework h2 {
+    text-align: center;
+    color: var(--jungle-green);
+    margin-bottom: 3rem;
+}
+
+.framework-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.framework-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.framework-box.priority {
+    border: 3px solid var(--dawn-coral);
+}
+
+.framework-box h3 {
+    color: var(--jungle-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.framework-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.framework-box li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.framework-box li:last-child {
+    border-bottom: none;
+}
+
+.framework-box p {
+    margin-bottom: 1rem;
+}
+
+.framework-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* CTA Section Inline */
+.cta-section-inline {
+    margin: 5rem 0;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--jungle-green), var(--twilight-purple));
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cta-box h3 {
+    color: var(--mycelium-gold);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .framework-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .rating-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}</style></head><body><header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="/mycelium-2025/">
+                <span class="logo-icon">🍄</span>
+                <span class="logo-text">Mycelium 2025</span>
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header><nav class="site-nav" id="mainNav">
+    <ul class="nav-list">
+        <li><a href="/mycelium-2025/" class="nav-link">Home</a></li>
+        <li><a href="/mycelium-2025/lineup" class="nav-link">Lineup</a></li>
+        <li><a href="/mycelium-2025/schedule" class="nav-link">Schedule</a></li>
+        <li><a href="/mycelium-2025/stages" class="nav-link">Stages</a></li>
+        <li><a href="/mycelium-2025/practical-info" class="nav-link">Practical Info</a></li>
+        <li><a href="/mycelium-2025/tickets" class="nav-link nav-cta">Tickets</a></li>
+    </ul>
+</nav>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    
+    if (toggle) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+
+    // Close menu when clicking nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    });
+
+    // Set active nav state
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+</script><div class="page-hero">
+    <h1>Complete Artist Guide</h1>
+    <p class="page-subtitle">50 acts across 4 stages. Decades of scene-building, cultural preservation, and creative risk-taking.</p>
+</div>
+
+<div class="container">
+    <section class="lineup-intro">
+        <p>Mycelium 2025 showcases Thailand's underground music scene meeting international electronic pioneers. This comprehensive guide provides ratings, detailed profiles, and strategic scheduling intelligence to help you navigate 50 acts across 48+ hours of programming.</p>
+        
+        <div class="rating-system">
+            <h3>Rating System</h3>
+            <div class="rating-legend">
+                <div class="rating-item">
+                    <span class="rating"><span class="star">⭐⭐⭐</span></span>
+                    <span>Unmissable Performances - Pioneer status, unique positioning, or exceptional timing</span>
+                </div>
+                <div class="rating-item">
+                    <span class="rating"><span class="star">⭐⭐</span></span>
+                    <span>Highly Recommended - Scene architects and innovators</span>
+                </div>
+                <div class="rating-item">
+                    <span class="rating"><span class="star">⭐</span></span>
+                    <span>Worth Catching - Solid performances and emerging talents</span>
+                </div>
+                <div class="rating-item">
+                    <span class="rating"><span class="moon">🌙</span></span>
+                    <span>Graveyard Shift - Performances between 02:00-08:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tier-one-artists">
+        <h2>Tier 1: Unmissable Performances ⭐⭐⭐</h2>
+        
+        <div class="artist-grid">
+            <div class="artist-card featured" id="srirajah">
+                <h3 class="artist-name">Srirajah Rockers</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span></span>
+                    <span class="artist-time">Saturday 23:00-00:00</span>
+                    <span class="stage-badge stage-mycelium">Mycelium</span>
+                </div>
+                <h4>22 Years of Thai Reggae Mastery</h4>
+                <p><strong>Who They Are:</strong> Thailand's premier 12-piece reggae/dub band delivering roots rock reggae with distinctive Thai flavor. Operating since 2003, with "Enduro" album released January 2025.</p>
+                <p><strong>Festival Credentials:</strong> Performed at Wonderfruit Festival alongside Rudimental and Nightmares on Wax, Maho Rasop Festival with Tame Impala. Described as "the most popular band among young people in Thailand."</p>
+                <p><strong>Why Unmissable:</strong> This is Thailand's reggae scene at its highest level. Saturday 23:00 timing positions them at peak festival energy when a 12-piece reggae orchestra delivers maximum communal celebration.</p>
+            </div>
+
+            <div class="artist-card featured" id="easy-velvet">
+                <h3 class="artist-name">Easy Velvet</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span></span>
+                    <span class="artist-time">Saturday 16:00-18:00</span>
+                    <span class="stage-badge stage-jungle">Jungle</span>
+                </div>
+                <h4>Sunset Downtempo Ethnic Fusion</h4>
+                <p><strong>Sound Signature:</strong> Downtempo ethnic music producer fusing trip hop, oriental vibes, and psychedelic modulations. Think DJ Shadow's cinematic approach meeting Asian instrumentation.</p>
+                <p><strong>Why Unmissable:</strong> Perfect sunset timing (16:00-18:00) on Jungle Stage. As daylight fades into festival night, Easy Velvet's atmospheric downtempo provides the essential bridge between afternoon and evening energy.</p>
+            </div>
+
+            <div class="artist-card featured" id="helicopter">
+                <h3 class="artist-name">Helicopter Secondhand</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span></span>
+                    <span class="artist-time">Friday 19:30-20:30</span>
+                    <span class="stage-badge stage-mycelium">Mycelium</span>
+                </div>
+                <h4>World Cup Busking Champions</h4>
+                <p><strong>Who They Are:</strong> Chiang Mai trio (Pod, Bas, Jack) who represented Thailand at Busking World Cup 2023 in South Korea. International competition recognition validates their street-performance roots and cross-cultural appeal.</p>
+                <p><strong>Sound Identity:</strong> Fusion combining contemporary Western pop-rock with Aboriginal, African, South American, and Thai Lanna musical influences. Didgeridoo's drone paired with Lanna percussion creates unique sonic territory.</p>
+                <p><strong>Why Unmissable:</strong> Friday 19:30 positions them as the festival's opening statement—perfect introduction to Chiang Mai's world-music sensibility.</p>
+            </div>
+
+            <div class="artist-card featured" id="venn">
+                <h3 class="artist-name">Venn</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span></span>
+                    <span class="artist-time">Saturday 21:30-22:30</span>
+                    <span class="stage-badge stage-mycelium">Mycelium</span>
+                </div>
+                <h4>2024's Best Album Recognition</h4>
+                <p><strong>2024 Recognition:</strong> Second album "Mölkky" (November 2024) recognized by multiple Thai media outlets as one of the year's best albums. 12 songs, 54 minutes, bilingual Thai-English lyrics.</p>
+                <p><strong>Festival Pedigree:</strong> Performed at Maho Rasop, Pelupo, and Wonderfruit—Thailand's major independent festivals.</p>
+                <p><strong>Why Unmissable:</strong> Catching an award-worthy act at creative peak timing before larger recognition changes their festival positioning.</p>
+            </div>
+
+            <div class="artist-card featured" id="amber-leaf">
+                <h3 class="artist-name">Amber Leaf</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span></span>
+                    <span class="artist-time">Friday 23:45-00:45 + Sunday 09:20-11:20</span>
+                    <span class="stage-badge stage-grounding">Grounding</span>
+                </div>
+                <h4>Movement-Based Ambient Experience</h4>
+                <p><strong>Unique Approach:</strong> Creates music for embodied listening—crafted specifically for movement and dance within ambient contexts. Not passive background music.</p>
+                <p><strong>Two Opportunities:</strong> Friday late night (23:45) and Sunday morning (09:20). Two completely different energy contexts for experiencing this approach.</p>
+                <p><strong>Why Unmissable:</strong> Rare to encounter ambient music designed explicitly for physical engagement rather than contemplation.</p>
+            </div>
+
+            <div class="artist-card featured" id="wannarit">
+                <h3 class="artist-name">Wannarit / Stylish Nonsense</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span> <span class="moon">🌙</span></span>
+                    <span class="artist-time">Friday 01:00-02:00</span>
+                    <span class="stage-badge stage-grounding">Grounding</span>
+                </div>
+                <h4>32 Years of Pioneer Status</h4>
+                <p><strong>Legendary Credentials:</strong> One half of Stylish Nonsense, Thailand's experimental electronic duo operating since 1993. Founded Panda Records (2000) and created Stone Free Music Festival (2012-14).</p>
+                <p><strong>Performance Philosophy:</strong> 100% improvisation. Each performance exists once, then disappears. Technical limitations as musicians forced electronic experimentation, becoming signature strength.</p>
+                <p><strong>Why Unmissable:</strong> True pioneer status. Graveyard-shift timing (01:00) perfectly suits experimental ambient. He was crafting this music before most attendees were born.</p>
+            </div>
+
+            <div class="artist-card featured" id="wuthichai">
+                <h3 class="artist-name">Wuthichai</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐⭐</span></span>
+                    <span class="artist-time">Sunday 11:20-13:20</span>
+                    <span class="stage-badge stage-jungle">Jungle</span>
+                </div>
+                <h4>24 Years Integrating Lanna Folk & Modern Electronic</h4>
+                <p><strong>Pioneering Status:</strong> Chiang Mai electronic music pioneer (DJ Shaky) integrating traditional Lanna folk with modern electronic since 2001. Significantly influenced Chiang Mai's music scene.</p>
+                <p><strong>Scene Architecture:</strong> Founded Jive Festival (14 annual editions pre-COVID), established Ga-Lae Recordings label (2023), co-founded Warm Up Cafe.</p>
+                <p><strong>"Bai Mai Wai" Album:</strong> Translates to "The Story of My Hometown," capturing journey through Nepal and Thailand mountains, blending tribal voices into rich soundscape.</p>
+                <p><strong>Why Unmissable:</strong> Essential for understanding Chiang Mai's musical evolution. His Lanna-electronic fusion provides cultural grounding as festival concludes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tier-two-artists">
+        <h2>Tier 2: Highly Recommended ⭐⭐</h2>
+        
+        <div class="artist-grid">
+            <div class="artist-card">
+                <h3 class="artist-name">Makara</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐</span></span>
+                    <span class="artist-time">Friday 21:00-22:00</span>
+                    <span class="stage-badge stage-mycelium">Mycelium</span>
+                </div>
+                <p><strong>Sound:</strong> Thai psychedelic rock with contemporary indie influences. Five-piece with improvisation focus—each live performance becomes unique.</p>
+                <p><strong>Why Attend:</strong> Following Helicopter Secondhand's world-music fusion, Makara shifts toward psychedelic exploration. Value spontaneous creativity over predictable execution.</p>
+            </div>
+
+            <div class="artist-card">
+                <h3 class="artist-name">Liem</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐</span></span>
+                    <span class="artist-time">Friday 22:00-00:00</span>
+                    <span class="stage-badge stage-jungle">Jungle</span>
+                </div>
+                <p><strong>Sound:</strong> House music with deep grooves and melodic sensibilities. Bangkok-based DJ known for reading dancefloor energy.</p>
+                <p><strong>Why Attend:</strong> Prime Friday night slot (22:00-00:00) on Jungle Stage for those wanting to dance rather than watch bands.</p>
+            </div>
+
+            <div class="artist-card">
+                <h3 class="artist-name">Pyrosoma</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐</span> <span class="moon">🌙</span></span>
+                    <span class="artist-time">Friday 04:45-05:45</span>
+                    <span class="stage-badge stage-grounding">Grounding</span>
+                </div>
+                <p><strong>Sound:</strong> Ambient techno exploring the space between contemplation and movement. Named after bioluminescent marine organisms.</p>
+                <p><strong>Why Attend:</strong> Dawn slot (04:45) for those seeking transcendent sunrise experiences. Music designed for liminal states.</p>
+            </div>
+
+            <div class="artist-card">
+                <h3 class="artist-name">Elaheh</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐</span> <span class="moon">🌙</span></span>
+                    <span class="artist-time">Saturday 02:00-04:00</span>
+                    <span class="stage-badge stage-jungle">Jungle</span>
+                </div>
+                <p><strong>Scene Credentials:</strong> Bangkok-born DJ with Persian roots, integral to Bangkok's underground through UNST (techno institution) and Soundistan movement.</p>
+                <p><strong>Sound Philosophy:</strong> "Deep, cosmic, and psychedelic" house/techno. Prime graveyard slot (02:00-04:00) for transcendent dancefloor journeys.</p>
+            </div>
+
+            <div class="artist-card">
+                <h3 class="artist-name">Shantiago</h3>
+                <div class="artist-meta">
+                    <span class="artist-rating"><span class="star">⭐⭐</span></span>
+                    <span class="artist-time">Sunday 06:20-08:20</span>
+                    <span class="stage-badge stage-psysquare">Psysquare</span>
+                </div>
+                <p><strong>Unique Positioning:</strong> Spanish-born musician, DJ, and sound therapist. Progressive psytrance transitioning to ambient with sound healing focus.</p>
+                <p><strong>Why Attend:</strong> Sunday sunrise bridge—maintains nighttime energy while introducing reflective comedown. Trained in using frequency for therapeutic purposes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="decision-framework">
+        <h2>Decision-Making Framework</h2>
+        <div class="framework-content">
+            <div class="framework-box priority">
+                <h3>🏆 Top Priority (⭐⭐⭐)</h3>
+                <ul>
+                    <li><strong>Srirajah Rockers</strong> - Saturday 23:00</li>
+                    <li><strong>Easy Velvet</strong> - Saturday 16:00 (sunset)</li>
+                    <li><strong>Venn</strong> - Saturday 21:30</li>
+                    <li><strong>Helicopter Secondhand</strong> - Friday 19:30</li>
+                    <li><strong>Amber Leaf</strong> - Friday 23:45 OR Sunday 09:20</li>
+                    <li><strong>Wannarit</strong> - Friday 01:00 (graveyard)</li>
+                    <li><strong>Wuthichai</strong> - Sunday 11:20</li>
+                </ul>
+            </div>
+
+            <div class="framework-box">
+                <h3>Strategic Considerations</h3>
+                <p><strong>Sunset Slots:</strong> Easy Velvet (Saturday 16:00) captures the magical transition from day to night—often the most memorable festival moment.</p>
+                <p><strong>Graveyard Shift (🌙):</strong> Acts performing 02:00-08:00 demand physical commitment. Attempt only if genuinely energized; forcing participation creates misery, not transcendence.</p>
+                <p><strong>Stage Proximity:</strong> Mycelium and Jungle stages are walkable. Psysquare and Grounding require more intentional journey. Plan accordingly.</p>
+                <p><strong>Cultural Context:</strong> Wuthichai (Sunday 11:20) provides essential cultural grounding—understand Chiang Mai's musical DNA before leaving.</p>
+            </div>
+
+            <div class="framework-box">
+                <h3>Schedule Clashes to Navigate</h3>
+                <p><strong>Saturday 21:30-23:00:</strong> Venn (Mycelium) vs. Srirajah Rockers (Mycelium). Catch Venn, then transition to Srirajah at 23:00.</p>
+                <p><strong>Friday Night:</strong> Multiple graveyard options. Choose based on energy: Wannarit (ambient), Hellblueboi (house), or Vbrtns (experimental).</p>
+                <p><strong>Sunday Morning:</strong> Choose recovery path: Amber Leaf (09:20) for movement-ambient or Wuthichai (11:20) for Lanna-electronic.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section-inline">
+        <div class="cta-box">
+            <h3>Ready to Experience 50 Acts?</h3>
+            <p>This guide represents decades of scene-building and creative risk-taking. Understanding these connections transforms attendance from passive consumption into active participation in living musical culture.</p>
+            <div class="cta-buttons">
+                <a href="/mycelium-2025/schedule" class="btn btn-primary">View Full Schedule</a>
+                <a href="/mycelium-2025/tickets" class="btn btn-secondary">Get Tickets</a>
+            </div>
+        </div>
+    </section>
+</div><footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Mycelium 2025</h3>
+                <p>Thailand's Underground Music Convergence</p>
+                <p class="footer-date">November 14-16, 2025</p>
+                <p class="footer-location">Tiger Jungle Art Camp, Chiang Dao</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Festival</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/lineup">Lineup</a></li>
+                    <li><a href="/mycelium-2025/schedule">Schedule</a></li>
+                    <li><a href="/mycelium-2025/stages">Stages</a></li>
+                    <li><a href="/mycelium-2025/tickets">Tickets</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/practical-info">Practical Info</a></li>
+                    <li><a href="/mycelium-2025/location">Location</a></li>
+                    <li><a href="/mycelium-2025/faq">FAQ</a></li>
+                    <li><a href="/mycelium-2025/about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="/mycelium-2025/news">News</a></li>
+                    <li><a href="/mycelium-2025/contact">Contact</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mycelium Festival. All rights reserved.</p>
+            <p class="footer-tagline">Connected through sound 🍄</p>
+        </div>
+    </div>
+</footer></body></html>

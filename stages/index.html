@@ -451,513 +451,471 @@ img {
 
 /* Four Stages - Sonic Territories at Mycelium 2025 - Page CSS */
 
-/* Schedule Tools */
-.schedule-tools {
-    background: var(--bg-light);
-    padding: 2rem;
+/* Stages Intro */
+.stages-intro {
+    margin-bottom: 4rem;
+}
+
+.stages-intro p {
+    font-size: 1.1rem;
+}
+
+/* Stage Detail Sections */
+.stage-detail {
+    margin: 6rem 0;
+}
+
+.stage-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
     border-radius: 15px;
+    color: white;
     margin-bottom: 3rem;
 }
 
-.schedule-intro p {
-    font-size: 1.1rem;
+.stage-header-mycelium {
+    background: linear-gradient(135deg, var(--dawn-coral), var(--jungle-green));
+}
+
+.stage-header-jungle {
+    background: linear-gradient(135deg, var(--jungle-green), #1a3009);
+}
+
+.stage-header-psysquare {
+    background: linear-gradient(135deg, var(--twilight-purple), #3d2449);
+}
+
+.stage-header-grounding {
+    background: linear-gradient(135deg, var(--stone-gray), #5a6760);
+}
+
+.stage-icon-large {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.stage-header-text h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.stage-tagline {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Stage Content */
+.stage-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.stage-description h3 {
+    color: var(--jungle-green);
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
 }
 
-.schedule-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-/* Schedule Filters */
-.schedule-filters {
-    margin: 3rem 0;
-}
-
-.schedule-filters h3 {
-    color: var(--jungle-green);
+.stage-description h4 {
+    color: var(--dawn-coral);
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+.stage-description p {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
 }
 
-.filter-btn {
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--stone-gray);
-    background: white;
-    color: var(--text-dark);
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    transition: all 0.3s;
-    font-size: 1rem;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--jungle-green);
-    color: white;
-    border-color: var(--jungle-green);
-}
-
-/* Day Schedule */
-.day-schedule {
-    margin: 5rem 0;
-}
-
-.day-schedule h2 {
-    color: var(--jungle-green);
-    border-bottom: 3px solid var(--mycelium-gold);
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-}
-
-.day-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: var(--twilight-purple);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-/* Schedule Table */
-.schedule-table-wrapper {
-    overflow-x: auto;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: white;
-}
-
-.schedule-table thead {
-    background: var(--jungle-green);
-    color: white;
-}
-
-.schedule-table th {
-    padding: 1rem;
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    position: sticky;
-    top: 0;
-}
-
-.schedule-table td {
-    padding: 1rem;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.schedule-table tbody tr {
-    transition: background-color 0.3s;
-}
-
-.schedule-table tbody tr:hover {
-    background: rgba(212, 165, 116, 0.1);
-}
-
-.highlight-row {
-    background: rgba(230, 126, 92, 0.1) !important;
-}
-
-.graveyard-row {
-    background: rgba(107, 73, 132, 0.05);
-}
-
-.rating-display {
-    font-size: 1.1rem;
-}
-
-.btn-small {
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: 2px solid var(--jungle-green);
-    background: white;
-    color: var(--jungle-green);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-}
-
-.btn-small:hover {
-    background: var(--jungle-green);
-    color: white;
-}
-
-.btn-small.added {
-    background: var(--dawn-coral);
-    border-color: var(--dawn-coral);
-    color: white;
-}
-
-/* Key Performances */
-.key-performances {
-    background: var(--bg-light);
-    padding: 2rem;
-    border-radius: 12px;
-    margin: 2rem 0;
-    border-left: 5px solid var(--mycelium-gold);
-}
-
-.key-performances h3 {
-    color: var(--jungle-green);
-    margin-bottom: 1rem;
-}
-
-.key-performances ul {
+.artist-list {
     list-style: none;
     padding-left: 0;
+    margin-top: 1rem;
 }
 
-.key-performances li {
+.artist-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--bg-light);
 }
 
-.key-performances li:last-child {
+.artist-list li:last-child {
     border-bottom: none;
 }
 
-.schedule-note {
-    font-style: italic;
-    color: var(--stone-gray);
-    margin-top: 2rem;
+.artist-list li::before {
+    content: '🍄';
+    position: absolute;
+    left: 0;
 }
 
-/* Schedule Tips */
-.schedule-tips {
-    margin: 5rem 0;
-    padding: 3rem 0;
+/* Stage Image */
+.stage-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 
-.schedule-tips h2 {
+.stage-visual {
+    position: sticky;
+    top: 100px;
+}
+
+.stage-vibe-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--mycelium-gold);
+}
+
+.stage-vibe-card h4 {
+    color: var(--jungle-green);
+    margin-bottom: 1rem;
+}
+
+.stage-vibe-card p {
+    margin-bottom: 0;
+}
+
+/* Stage Map Section */
+.stage-map-section {
+    margin: 6rem 0;
+    padding: 4rem 0;
+    background: var(--bg-light);
+    border-radius: 15px;
+}
+
+.stage-map-section h2 {
     text-align: center;
     color: var(--jungle-green);
     margin-bottom: 3rem;
 }
 
-.tips-grid {
+.map-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-.tip-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid var(--mycelium-gold);
-}
-
-.tip-card h4 {
-    color: var(--jungle-green);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.tip-card p {
-    margin-bottom: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .schedule-table {
-        font-size: 0.9rem;
-    }
-
-    .schedule-table th,
-    .schedule-table td {
-        padding: 0.6rem;
-    }
-
-    .filter-buttons {
-        flex-direction: column;
-    }
-
-    .filter-btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .schedule-actions {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .tips-grid {
-        grid-template-columns: 1fr;
-    }
-}/* Schedule Tools */
-.schedule-tools {
-    background: var(--bg-light);
-    padding: 2rem;
+.map-image img {
     border-radius: 15px;
-    margin-bottom: 3rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 
-.schedule-intro p {
-    font-size: 1.1rem;
+.map-info h3 {
+    color: var(--jungle-green);
     margin-bottom: 1.5rem;
 }
 
-.schedule-actions {
+.map-info p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.map-info strong {
+    color: var(--dawn-coral);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .stage-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .stage-icon-large {
+        font-size: 4rem;
+    }
+
+    .stage-header-text h2 {
+        font-size: 2rem;
+    }
+
+    .stage-tagline {
+        font-size: 1rem;
+    }
+
+    .stage-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stage-visual {
+        position: relative;
+        top: 0;
+    }
+
+    .map-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stage-detail {
+        margin: 4rem 0;
+    }
+
+    .stage-icon-large {
+        font-size: 3rem;
+    }
+
+    .stage-header-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .stage-description h3 {
+        font-size: 1.5rem;
+    }
+
+    .stage-description h4 {
+        font-size: 1.2rem;
+    }
+}/* Stages Intro */
+.stages-intro {
+    margin-bottom: 4rem;
+}
+
+.stages-intro p {
+    font-size: 1.1rem;
+}
+
+/* Stage Detail Sections */
+.stage-detail {
+    margin: 6rem 0;
+}
+
+.stage-header {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 3rem;
 }
 
-/* Schedule Filters */
-.schedule-filters {
-    margin: 3rem 0;
+.stage-header-mycelium {
+    background: linear-gradient(135deg, var(--dawn-coral), var(--jungle-green));
 }
 
-.schedule-filters h3 {
-    color: var(--jungle-green);
-    margin-bottom: 1rem;
+.stage-header-jungle {
+    background: linear-gradient(135deg, var(--jungle-green), #1a3009);
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+.stage-header-psysquare {
+    background: linear-gradient(135deg, var(--twilight-purple), #3d2449);
 }
 
-.filter-btn {
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--stone-gray);
-    background: white;
-    color: var(--text-dark);
-    border-radius: 8px;
-    cursor: pointer;
+.stage-header-grounding {
+    background: linear-gradient(135deg, var(--stone-gray), #5a6760);
+}
+
+.stage-icon-large {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.stage-header-text h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.stage-tagline {
+    font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    transition: all 0.3s;
-    font-size: 1rem;
+    opacity: 0.9;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--jungle-green);
-    color: white;
-    border-color: var(--jungle-green);
+/* Stage Content */
+.stage-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-/* Day Schedule */
-.day-schedule {
-    margin: 5rem 0;
-}
-
-.day-schedule h2 {
+.stage-description h3 {
     color: var(--jungle-green);
-    border-bottom: 3px solid var(--mycelium-gold);
-    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.stage-description h4 {
+    color: var(--dawn-coral);
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-.day-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: var(--twilight-purple);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+.stage-description p {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
 }
 
-/* Schedule Table */
-.schedule-table-wrapper {
-    overflow-x: auto;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: white;
-}
-
-.schedule-table thead {
-    background: var(--jungle-green);
-    color: white;
-}
-
-.schedule-table th {
-    padding: 1rem;
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    position: sticky;
-    top: 0;
-}
-
-.schedule-table td {
-    padding: 1rem;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.schedule-table tbody tr {
-    transition: background-color 0.3s;
-}
-
-.schedule-table tbody tr:hover {
-    background: rgba(212, 165, 116, 0.1);
-}
-
-.highlight-row {
-    background: rgba(230, 126, 92, 0.1) !important;
-}
-
-.graveyard-row {
-    background: rgba(107, 73, 132, 0.05);
-}
-
-.rating-display {
-    font-size: 1.1rem;
-}
-
-.btn-small {
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: 2px solid var(--jungle-green);
-    background: white;
-    color: var(--jungle-green);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-}
-
-.btn-small:hover {
-    background: var(--jungle-green);
-    color: white;
-}
-
-.btn-small.added {
-    background: var(--dawn-coral);
-    border-color: var(--dawn-coral);
-    color: white;
-}
-
-/* Key Performances */
-.key-performances {
-    background: var(--bg-light);
-    padding: 2rem;
-    border-radius: 12px;
-    margin: 2rem 0;
-    border-left: 5px solid var(--mycelium-gold);
-}
-
-.key-performances h3 {
-    color: var(--jungle-green);
-    margin-bottom: 1rem;
-}
-
-.key-performances ul {
+.artist-list {
     list-style: none;
     padding-left: 0;
+    margin-top: 1rem;
 }
 
-.key-performances li {
+.artist-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--bg-light);
 }
 
-.key-performances li:last-child {
+.artist-list li:last-child {
     border-bottom: none;
 }
 
-.schedule-note {
-    font-style: italic;
-    color: var(--stone-gray);
-    margin-top: 2rem;
+.artist-list li::before {
+    content: '🍄';
+    position: absolute;
+    left: 0;
 }
 
-/* Schedule Tips */
-.schedule-tips {
-    margin: 5rem 0;
-    padding: 3rem 0;
+/* Stage Image */
+.stage-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 
-.schedule-tips h2 {
+.stage-visual {
+    position: sticky;
+    top: 100px;
+}
+
+.stage-vibe-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--mycelium-gold);
+}
+
+.stage-vibe-card h4 {
+    color: var(--jungle-green);
+    margin-bottom: 1rem;
+}
+
+.stage-vibe-card p {
+    margin-bottom: 0;
+}
+
+/* Stage Map Section */
+.stage-map-section {
+    margin: 6rem 0;
+    padding: 4rem 0;
+    background: var(--bg-light);
+    border-radius: 15px;
+}
+
+.stage-map-section h2 {
     text-align: center;
     color: var(--jungle-green);
     margin-bottom: 3rem;
 }
 
-.tips-grid {
+.map-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-.tip-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid var(--mycelium-gold);
+.map-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 
-.tip-card h4 {
+.map-info h3 {
     color: var(--jungle-green);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-.tip-card p {
-    margin-bottom: 0;
+.map-info p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.map-info strong {
+    color: var(--dawn-coral);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .schedule-table {
-        font-size: 0.9rem;
-    }
-
-    .schedule-table th,
-    .schedule-table td {
-        padding: 0.6rem;
-    }
-
-    .filter-buttons {
+@media (max-width: 968px) {
+    .stage-header {
         flex-direction: column;
-    }
-
-    .filter-btn {
-        width: 100%;
         text-align: center;
+        padding: 2rem;
     }
 
-    .schedule-actions {
-        flex-direction: column;
+    .stage-icon-large {
+        font-size: 4rem;
     }
 
-    .btn {
-        width: 100%;
+    .stage-header-text h2 {
+        font-size: 2rem;
     }
 
-    .tips-grid {
+    .stage-tagline {
+        font-size: 1rem;
+    }
+
+    .stage-content {
         grid-template-columns: 1fr;
+    }
+
+    .stage-visual {
+        position: relative;
+        top: 0;
+    }
+
+    .map-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stage-detail {
+        margin: 4rem 0;
+    }
+
+    .stage-icon-large {
+        font-size: 3rem;
+    }
+
+    .stage-header-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .stage-description h3 {
+        font-size: 1.5rem;
+    }
+
+    .stage-description h4 {
+        font-size: 1.2rem;
     }
 }</style></head><body><header class="site-header">
     <div class="header-container">
@@ -1019,266 +977,196 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script><div class="page-hero">
-    <h1>Festival Schedule</h1>
-    <p class="page-subtitle">50 acts across 4 stages, 48+ hours of continuous programming. Plan your journey.</p>
+    <h1>Four Stages, Four Sonic Territories</h1>
+    <p class="page-subtitle">Each stage creates distinct environmental micro-climates for different musical journeys.</p>
 </div>
 
 <div class="container">
-    <section class="schedule-tools">
-        <div class="schedule-intro">
-            <p>Navigate 50 acts intelligently. Use filters to focus on specific stages or days. Download the complete schedule or build your personal planner.</p>
-        </div>
-        
-        <div class="schedule-actions">
-            <button class="btn btn-primary" id="buildSchedule">Build My Schedule</button>
-            <a href="#" class="btn btn-secondary" download>Download PDF</a>
-        </div>
+    <section class="stages-intro">
+        <p>Mycelium 2025's four stages operate as interconnected nodes in a living musical network. Each provides unique sonic environments, from full-band performances to experimental ambient drift, psytrance spirals to jungle canopy house sessions. Understanding each stage's character helps you navigate the festival's 48+ hours intelligently.</p>
     </section>
 
-    <section class="schedule-filters">
-        <h3>Filter By Stage</h3>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-stage="all">All Stages</button>
-            <button class="filter-btn" data-stage="mycelium">Mycelium</button>
-            <button class="filter-btn" data-stage="jungle">Jungle</button>
-            <button class="filter-btn" data-stage="psysquare">Psysquare</button>
-            <button class="filter-btn" data-stage="grounding">Grounding</button>
-        </div>
-    </section>
-
-    <section class="day-schedule" id="friday-schedule">
-        <h2>Friday November 14</h2>
-        <p class="day-subtitle">Opening Night: 17:00-07:45 • 15 Acts</p>
-        
-        <div class="schedule-table-wrapper">
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Artist</th>
-                        <th>Stage</th>
-                        <th>Rating</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr data-stage="mycelium">
-                        <td>17:00-18:00</td>
-                        <td><strong>Drum Circle</strong></td>
-                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
-                        <td><span class="rating-display">⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="mycelium">
-                        <td>18:00-19:00</td>
-                        <td><strong>Tae Simong</strong></td>
-                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
-                        <td><span class="rating-display">⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="jungle">
-                        <td>18:00-20:00</td>
-                        <td><strong>Kittikun</strong></td>
-                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
-                        <td><span class="rating-display">⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="mycelium" class="highlight-row">
-                        <td>19:30-20:30</td>
-                        <td><strong>Helicopter Secondhand</strong></td>
-                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
-                        <td><span class="rating-display">⭐⭐⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="jungle">
-                        <td>20:00-22:00</td>
-                        <td><strong>Kornnlee</strong></td>
-                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
-                        <td><span class="rating-display">⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="mycelium">
-                        <td>21:00-22:00</td>
-                        <td><strong>Makara</strong></td>
-                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
-                        <td><span class="rating-display">⭐⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="jungle">
-                        <td>22:00-00:00</td>
-                        <td><strong>Liem</strong></td>
-                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
-                        <td><span class="rating-display">⭐⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="mycelium">
-                        <td>22:30-23:30</td>
-                        <td><strong>The Labrador Band</strong></td>
-                        <td><span class="stage-badge stage-mycelium">Mycelium</span></td>
-                        <td><span class="rating-display">⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="grounding" class="highlight-row">
-                        <td>23:45-00:45</td>
-                        <td><strong>Amber Leaf</strong></td>
-                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
-                        <td><span class="rating-display">⭐⭐⭐</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="jungle" class="graveyard-row">
-                        <td>00:00-02:00</td>
-                        <td><strong>Takky</strong></td>
-                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
-                        <td><span class="rating-display">⭐ 🌙</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="grounding" class="graveyard-row highlight-row">
-                        <td>01:00-02:00</td>
-                        <td><strong>Wannarit</strong> (Stylish Nonsense)</td>
-                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
-                        <td><span class="rating-display">⭐⭐⭐ 🌙</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="jungle" class="graveyard-row">
-                        <td>02:00-04:00</td>
-                        <td><strong>Hellblueboi</strong></td>
-                        <td><span class="stage-badge stage-jungle">Jungle</span></td>
-                        <td><span class="rating-display">⭐ 🌙</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="grounding" class="graveyard-row">
-                        <td>02:15-03:15</td>
-                        <td><strong>Midnight Valencia</strong></td>
-                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
-                        <td><span class="rating-display">⭐ 🌙</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="grounding" class="graveyard-row">
-                        <td>03:30-04:30</td>
-                        <td><strong>Kienng</strong></td>
-                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
-                        <td><span class="rating-display">⭐ 🌙</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                    <tr data-stage="grounding" class="graveyard-row">
-                        <td>04:45-05:45</td>
-                        <td><strong>Pyrosoma</strong></td>
-                        <td><span class="stage-badge stage-grounding">Grounding</span></td>
-                        <td><span class="rating-display">⭐⭐ 🌙</span></td>
-                        <td><button class="btn-small btn-add">Add</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="day-schedule" id="saturday-schedule">
-        <h2>Saturday November 15</h2>
-        <p class="day-subtitle">Peak Programming: 09:00-06:00 • 26 Acts Across All 4 Stages</p>
-        
-        <div class="key-performances">
-            <h3>Saturday Highlights</h3>
-            <ul>
-                <li><strong>16:00-18:00:</strong> Easy Velvet (Jungle) - Sunset downtempo ⭐⭐⭐</li>
-                <li><strong>21:30-22:30:</strong> Venn (Mycelium) - 2024's best album ⭐⭐⭐</li>
-                <li><strong>23:00-00:00:</strong> Srirajah Rockers (Mycelium) - 22-year Thai reggae legends ⭐⭐⭐</li>
-                <li><strong>02:00-04:00:</strong> Elaheh (Jungle) - Bangkok underground architect ⭐⭐ 🌙</li>
-            </ul>
-        </div>
-        
-        <p class="schedule-note"><em>Complete Saturday schedule with 26 acts available in downloadable PDF. Use filters above to explore by stage.</em></p>
-    </section>
-
-    <section class="day-schedule" id="sunday-schedule">
-        <h2>Sunday November 16</h2>
-        <p class="day-subtitle">Sunrise Comedowns & Afternoon Closings: 06:00-17:30 • 9 Acts</p>
-        
-        <div class="key-performances">
-            <h3>Sunday Highlights</h3>
-            <ul>
-                <li><strong>06:20-08:20:</strong> Shantiago (Psysquare) - Sound healing sunrise bridge ⭐⭐</li>
-                <li><strong>09:20-11:20:</strong> Amber Leaf (Grounding) - Movement-based ambient ⭐⭐⭐</li>
-                <li><strong>11:20-13:20:</strong> Wuthichai (Jungle) - 24 years Lanna-electronic integration ⭐⭐⭐</li>
-            </ul>
-        </div>
-        
-        <p class="schedule-note"><em>Sunday programming focuses on comedown and cultural grounding. Essential closings from scene pioneers.</em></p>
-    </section>
-
-    <section class="schedule-tips">
-        <h2>Strategic Scheduling Tips</h2>
-        <div class="tips-grid">
-            <div class="tip-card">
-                <h4>🌅 Don't Miss Sunset</h4>
-                <p>Easy Velvet (Saturday 16:00-18:00) captures the magical transition. Often the most memorable festival moment.</p>
+    <section class="stage-detail" id="mycelium-stage">
+        <div class="stage-header stage-header-mycelium">
+            <div class="stage-icon-large">🎸</div>
+            <div class="stage-header-text">
+                <h2>Mycelium Main Stage</h2>
+                <p class="stage-tagline">Full-band performances • Rock • Reggae • Folk • World Music</p>
             </div>
-            <div class="tip-card">
-                <h4>🌙 Graveyard Shift Strategy</h4>
-                <p>Acts performing 02:00-08:00 demand physical commitment. Attempt only if genuinely energized. Forcing it creates misery.</p>
+        </div>
+        
+        <div class="stage-content">
+            <div class="stage-description">
+                <h3>The Heart of the Network</h3>
+                <p>The Mycelium Main Stage serves as the festival's central gathering point, hosting full-band performances requiring complete instrumentation. This is where Srirajah Rockers' 12-piece reggae orchestra commands the space, where Helicopter Secondhand's world-music fusion captivates crowds, where Venn's experimental alternative folk unfolds across 54 minutes of bilingual storytelling.</p>
+                
+                <p>Unlike electronic-focused stages, Mycelium celebrates acoustic instrumentation and live band chemistry. Expect drum kits, bass rigs, guitar amplifiers, horn sections, and genuine human interaction between musicians reading each other's energy in real-time.</p>
+                
+                <h4>Sound System & Capacity</h4>
+                <p>Professional PA system designed for full-band dynamics—handling everything from intimate acoustic moments to reggae bass depth and rock crescendos. Large open area accommodating 500+ attendees for communal festival experiences.</p>
+                
+                <h4>Programming Philosophy</h4>
+                <p>Curated for acts requiring traditional band setups and audience attention to musicianship. Prime evening slots (19:00-00:00) when festival energy peaks and communal gathering feels natural.</p>
+                
+                <h4>Featured Artists</h4>
+                <ul class="artist-list">
+                    <li><strong>Srirajah Rockers</strong> - 22-year Thai reggae legends (Saturday 23:00)</li>
+                    <li><strong>Helicopter Secondhand</strong> - World Cup busking champions (Friday 19:30)</li>
+                    <li><strong>Venn</strong> - 2024's best album recognition (Saturday 21:30)</li>
+                    <li><strong>Makara</strong> - Psychedelic rock improvisation (Friday 21:00)</li>
+                </ul>
             </div>
-            <div class="tip-card">
-                <h4>🗺️ Stage Proximity</h4>
-                <p>Mycelium and Jungle are walkable. Psysquare and Grounding require intentional journey. Plan transitions.</p>
+            
+            <div class="stage-image">
+                <img src="https://codahosted.io/docs/9bejBCT96g/blobs/bl-3lYCSDe7Gw/529e335fe4f8278490042004ca4c6103f0c1c6c824e156f2a795a4171fa6de7455e4b152ffdb3a29e82d1e1eb06fc1e04a072c71b975481e3f3a45b2905d2f83a2a30456ce6ad5dc7b088e7932e9038af2cfd6986eab5e090023e51e715cfeb4da23b7da" alt="Mycelium Main Stage with full band">
+                <p class="caption">Mycelium Main Stage: Central gathering point for full-band performances</p>
             </div>
-            <div class="tip-card">
-                <h4>📋 Key Clashes</h4>
-                <p>Saturday 21:30-23:00: Venn then Srirajah Rockers (both Mycelium). Catch Venn, transition at 23:00.</p>
+        </div>
+    </section>
+
+    <section class="stage-detail" id="jungle-stage">
+        <div class="stage-header stage-header-jungle">
+            <div class="stage-icon-large">🌴</div>
+            <div class="stage-header-text">
+                <h2>Jungle Stage</h2>
+                <p class="stage-tagline">DJ Sets • House • Funk • Downtempo • Atmospheric Electronic</p>
+            </div>
+        </div>
+        
+        <div class="stage-content">
+            <div class="stage-description">
+                <h3>Beneath the Forest Canopy</h3>
+                <p>The Jungle Stage operates beneath Chiang Dao's forest canopy, creating an intimate sonic environment where trees become natural acoustic diffusers. DJ sets run from morning through dusk, specializing in house, funk, downtempo, and atmospheric electronic—genres that breathe with the jungle's organic rhythms.</p>
+                
+                <p>This stage captures the festival's sunset moment: Easy Velvet's downtempo ethnic fusion (Saturday 16:00-18:00) as daylight transforms into evening energy, providing the essential transition between afternoon exploration and nighttime intensity.</p>
+                
+                <h4>Natural Acoustics</h4>
+                <p>Forest canopy provides shade and unique acoustic properties. Sound moves differently through jungle vegetation—softer, more enveloping, creating intimate listening experiences despite outdoor setting.</p>
+                
+                <h4>Programming Philosophy</h4>
+                <p>Morning yoga sessions transition to midday house grooves, afternoon downtempo, sunset magic hour, and deep nighttime journeys. Programming emphasizes natural energy cycles—wake up, explore, dance, transcend.</p>
+                
+                <h4>Featured Artists</h4>
+                <ul class="artist-list">
+                    <li><strong>Easy Velvet</strong> - Sunset downtempo ethnic fusion (Saturday 16:00)</li>
+                    <li><strong>Wuthichai</strong> - 24 years Lanna-electronic integration (Sunday 11:20)</li>
+                    <li><strong>Liem</strong> - House grooves (Friday 22:00)</li>
+                    <li><strong>Elaheh</strong> - Deep cosmic psychedelic (Saturday 02:00)</li>
+                </ul>
+            </div>
+            
+            <div class="stage-image">
+                <img src="https://codahosted.io/docs/9bejBCT96g/blobs/bl-tRSQcumVmQ/03b17ca9252ac3d60ccef0076b5e804217c06598dcb540dd0d2883972757a8a60af5b2ce75ccf09c72a9871bbcb15de88b26900febf6a04a9e72a06dc5b6c0b84c5c5320e9d2ee9e95389109bd9d515739af85fbe9bddc9ddad9cc89f85ee72a0a506a11" alt="Easy Velvet sunset downtempo">
+                <p class="caption">Golden hour at Jungle Stage: Where sunset meets sound</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stage-detail" id="psytrance-stage">
+        <div class="stage-header stage-header-psysquare">
+            <div class="stage-icon-large">🔮</div>
+            <div class="stage-header-text">
+                <h2>Psytrance Stage (Psysquare)</h2>
+                <p class="stage-tagline">Forest Psytrance • Twilight Crossovers • Dark Psychedelic</p>
+            </div>
+        </div>
+        
+        <div class="stage-content">
+            <div class="stage-description">
+                <h3>Graveyard Shift Specialists</h3>
+                <p>Psysquare operates through the night's deepest hours, spiraling until sunrise with forest psytrance, twilight crossovers, and dark psychedelic. This stage demands physical commitment—those who arrive at 02:00 must genuinely want transcendent dancefloor experiences, not casual encounters.</p>
+                
+                <p>The graveyard shift (02:00-08:00) requires specific energy states. Psysquare respects this intensity, programming artists who understand how to guide dancers through darkness toward dawn. Shantiago's Sunday sunrise set (06:20-08:20) demonstrates this expertise: progressive psytrance transitioning to ambient with sound healing focus.</p>
+                
+                <h4>Dedicated Psychedelic Space</h4>
+                <p>Isolated from other stages to prevent sound bleed and maintain immersive atmosphere. Designed for those seeking continuous psychedelic journeys rather than stage-hopping variety.</p>
+                
+                <h4>Programming Philosophy</h4>
+                <p>Night becomes day becomes transformation. Forest psytrance builds through twilight hours, peaks in darkness, then gently releases into sunrise ambient. Complete arcs, not fragmented sets.</p>
+                
+                <h4>Featured Artists</h4>
+                <ul class="artist-list">
+                    <li><strong>Shantiago</strong> - Sound healing sunrise bridge (Sunday 06:20)</li>
+                    <li><strong>Various psytrance artists</strong> - Graveyard shift specialists throughout weekend</li>
+                </ul>
+            </div>
+            
+            <div class="stage-visual">
+                <div class="stage-vibe-card">
+                    <h4>🌙 Graveyard Energy Required</h4>
+                    <p>This stage isn't for casual visits. Come prepared for deep journeys, extended dancing, and surrendering to the night's arc. Forcing graveyard participation creates misery—only attend if genuinely energized.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stage-detail" id="grounding-stage">
+        <div class="stage-header stage-header-grounding">
+            <div class="stage-icon-large">🧘</div>
+            <div class="stage-header-text">
+                <h2>Grounding Stage</h2>
+                <p class="stage-tagline">Ambient Drift • Experimental Haze • Contemplative Soundscapes</p>
+            </div>
+        </div>
+        
+        <div class="stage-content">
+            <div class="stage-description">
+                <h3>Refuge and Laboratory</h3>
+                <p>The Grounding Stage serves dual purposes: refuge for overwhelmed nervous systems and laboratory for adventurous ears. Programming emphasizes texture, atmosphere, and contemplative spaces—ambient drift and experimental haze for introspective sonic journeys.</p>
+                
+                <p>Here you'll find Wannarit (Stylish Nonsense) delivering 100% improvised experimental electronics at Friday 01:00, his 32 years of pioneer status manifesting in pure spontaneous creation. Amber Leaf's movement-based ambient appears twice (Friday 23:45 and Sunday 09:20), offering music crafted for embodied listening rather than passive reception.</p>
+                
+                <h4>Intimate Listening Environment</h4>
+                <p>Smaller capacity, cushioned seating areas, lower lighting. Designed for sitting, lying down, moving slowly, or simply existing within sound rather than demanding attention.</p>
+                
+                <h4>Programming Philosophy</h4>
+                <p>Sound as healing, sound as exploration, sound as space itself. No predictable buildups or drops—just sustained atmospheres that reveal themselves gradually to patient listeners.</p>
+                
+                <h4>Featured Artists</h4>
+                <ul class="artist-list">
+                    <li><strong>Wannarit / Stylish Nonsense</strong> - 32-year pioneer (Friday 01:00)</li>
+                    <li><strong>Amber Leaf</strong> - Movement-based ambient (Friday 23:45 + Sunday 09:20)</li>
+                    <li><strong>Pyrosoma</strong> - Ambient techno dawn (Friday 04:45)</li>
+                    <li><strong>Midnight Valencia</strong> - Experimental haze (Friday 02:15)</li>
+                </ul>
+            </div>
+            
+            <div class="stage-visual">
+                <div class="stage-vibe-card">
+                    <h4>🌿 Intentional Listening</h4>
+                    <p>This stage rewards attention and patience. Not background music—foreground experience for those willing to listen deeply. Perfect for comedowns, resets, or genuine sonic exploration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stage-map-section">
+        <h2>Stage Layout & Proximity</h2>
+        <div class="map-content">
+            <div class="map-image">
+                <img src="https://codahosted.io/docs/9bejBCT96g/blobs/bl-q1VMcDM4Ds/3ceac32bc762d297d08d3e751e1c848f7b24644d3a9a9ef31cc65f90582a7745f596dbe714e1162cc69bbda079fc4fe5d2f095990d36082ccd703e7c67309efeefe2e8555beeabde4b0c9650e9afd4090645184dd8ee78588515f5a30622067824486b1e" alt="Festival stage map">
+                <p class="caption">Festival layout showing interconnected stages and mycelial pathways</p>
+            </div>
+            <div class="map-info">
+                <h3>Navigation Strategy</h3>
+                <p><strong>Close Proximity:</strong> Mycelium and Jungle stages are easily walkable (5 minutes). You can catch sets on both without missing beats.</p>
+                <p><strong>Intentional Journey:</strong> Psysquare and Grounding stages require more deliberate travel (10-15 minutes). Plan accordingly—these aren't casual drop-ins.</p>
+                <p><strong>Sound Management:</strong> Stages positioned to minimize sound bleed. Each maintains distinct sonic territory without overlap interference.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-section-inline">
         <div class="cta-box">
-            <h3>Build Your Perfect Festival Experience</h3>
-            <p>Download the complete schedule PDF or dive deeper into artist profiles to make informed choices.</p>
+            <h3>Ready to Navigate Four Sonic Territories?</h3>
+            <p>Understanding each stage's character transforms random wandering into intentional journey through interconnected musical ecosystems.</p>
             <div class="cta-buttons">
-                <a href="/mycelium-2025/lineup" class="btn btn-primary">Explore Artists</a>
-                <a href="/mycelium-2025/tickets" class="btn btn-secondary">Get Tickets</a>
+                <a href="/mycelium-2025/schedule" class="btn btn-primary">View Full Schedule</a>
+                <a href="/mycelium-2025/lineup" class="btn btn-secondary">Explore Artists</a>
             </div>
         </div>
     </section>
-</div>
-
-<script>
-// Filter functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const scheduleRows = document.querySelectorAll('.schedule-table tbody tr');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Update active state
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            const filterStage = this.dataset.stage;
-            
-            // Filter rows
-            scheduleRows.forEach(row => {
-                if (filterStage === 'all' || row.dataset.stage === filterStage) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        });
-    });
-    
-    // Add to schedule functionality
-    const addButtons = document.querySelectorAll('.btn-add');
-    addButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            if (this.textContent === 'Add') {
-                this.textContent = 'Added ✓';
-                this.classList.add('added');
-            } else {
-                this.textContent = 'Add';
-                this.classList.remove('added');
-            }
-        });
-    });
-});
-</script><footer class="site-footer">
+</div><footer class="site-footer">
     <div class="footer-container">
         <div class="footer-grid">
             <div class="footer-section">
